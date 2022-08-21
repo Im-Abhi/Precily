@@ -7,6 +7,7 @@ const initialState = {
   description: "",
 };
 
+// component displayed on the left side
 const Left = ({ setUserData }) => {
   const [user, setUser] = useState(initialState);
 

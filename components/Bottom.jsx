@@ -2,6 +2,7 @@ import React from "react";
 
 import { FaUserEdit, FaTrashAlt } from "react-icons/fa";
 
+// This component is the 3rd big component in the given UI
 const Bottom = ({ users, setId, setDeleteId, openModal, setUpdateId }) => {
   const actions = (user) => {
     openModal(true);

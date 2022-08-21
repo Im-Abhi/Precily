@@ -2,24 +2,23 @@ import React, { useState } from "react";
 import Form from "./Form";
 import axios from "axios";
 
+// update component to update user details
 const Update = ({ updateId, updateUserData, type, closeModal }) => {
-  const [user, SetUser] = useState(updateUserData);
+  const [user, setUser] = useState(updateUserData);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(user);
     if (type === "UPDATE") {
       const res = await axios.put(`/api/user/${updateId}`, user);
-      console.log(res);
       closeModal();
       return;
     }
     const res = await axios.post("/api/user", user);
     setUserData(res.data);
-    SetUser(initialState);
+    setUser(initialState);
   };
   const handleChange = (e) => {
-    SetUser({ ...user, [e.target.name]: e.target.value });
+    setUser({ ...user, [e.target.name]: e.target.value });
   };
   return (
     <div className="p-4">

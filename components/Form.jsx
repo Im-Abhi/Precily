@@ -1,5 +1,6 @@
 import React from "react";
 
+// add user form component
 const Form = ({ handleChange, handleSubmit, user, type }) => {
   return (
     <form onSubmit={handleSubmit}>
