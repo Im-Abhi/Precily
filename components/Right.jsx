@@ -6,7 +6,7 @@ const Right = ({ data, loading }) => {
   return (
     <div className="h-full py-4 px-6 text-[#116530]">
       {data && !loading ? (
-        <div className="flex items-center w-full h-full">
+        <div className="flex w-full h-full">
           <div className="flex-1">
             <h3 className="font-semibold text-lg">
               Name: <span className="font-normal">{data.name}</span>
